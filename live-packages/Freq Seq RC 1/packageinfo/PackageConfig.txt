@@ -1,0 +1,10 @@
+Ableton#03M
+
+PackageConfigurationInfo
+{
+  String PackageName = "FFX Freq Seq [RC 1]"; 
+  Int Version = 0;
+  Int MajorVersion = 1;
+  String PreviousName = "";
+  String MinimalSoftwareVersion = "10.0.0";
+}

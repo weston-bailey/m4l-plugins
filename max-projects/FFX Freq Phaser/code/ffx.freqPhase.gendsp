@@ -1,0 +1,172 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 3,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 42.0, 85.0, 1376.0, 929.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 594.66668701171875, 879.0, 35.0, 22.0 ],
+					"text" : "out 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 50.0, 879.0, 37.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-156",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 36.0, 30.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-157",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 458.5, 36.0, 30.0, 22.0 ],
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 867.0, 40.0, 30.0, 22.0 ],
+					"text" : "in 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 322.333343505859375, 873.0, 37.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "require (\"freqPhaseLib.genexpr\");\r\n\r\nHistory outFlag(0.0);\r\n\r\n//for fx mixer\r\nParam width(1, min=0.0, max=2.0);\r\nParam haas(0.0, min=0.0, max=20.0);\r\nParam bal(0.5, min=0.0, max=1.0);\r\nParam gain(1);\r\nParam drywet(0.5, min=0.0, max=1.0);\r\n\r\n//lfo controls\r\nParam depth(.5, min=0., max=1.);\r\nParam offset(.5, min=0, max=1.);         //right channel offset\r\nParam duty(1., min=0.1, max=1.0);\r\nParam wFSel(0);\r\n\r\n//env follow controls\r\nParam att(300.);\r\nParam rel(100.);\r\nParam thresh(.3);\r\nParam sense(1.);\r\nParam inv(0.);\r\n\r\n//fx specific\r\nParam ff(.92, min=-1, max=1);\r\nParam Q (.3, min=.3, max=10);\r\nParam fb(0., min=-.99, max=.99);\r\nParam del(1, min=1.0, max=(samplerate*.25));\r\n\r\ndryL = in1;\r\ndryR = in2;\r\np = in3;\r\n\r\ninFlag = dryL || dryR;\r\n\r\n//main dsp call\r\nyL = 0;\r\nyR = 0;\r\nenv = 0;\r\nif (inFlag == 1 || outFlag == 1){\r\nyL, yR, env = stereoPhaser(dryL, dryR, p, //input\r\n                            ff=ff, Q=Q, fb=fb, del=del, //effect\r\n                                wFSel=wFSel, duty=duty, offset=offset, depth=depth, //lfo\r\n                                    att=att, rel=rel, thresh=thresh, sense=sense, inv=inv, //env\r\n                                        width=width, haas=haas, bal=bal, gain=gain, drywet=drywet); //mixer\r\n\t}\r\n\telse{\r\n        yL = 0;\r\n        yR = 0;\r\n        env = env;\r\n}\r\n\r\noutFlag = aCheckStereo(yL, yR, .95, .000001);\r\n\r\n\r\nout1, out2, out3 = yL, yR, env;",
+					"fontface" : 0,
+					"fontname" : "Lucida Console",
+					"fontsize" : 12.0,
+					"id" : "obj-29",
+					"maxclass" : "codebox",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 50.0, 109.0, 836.0, 749.4000244140625 ]
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-156", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 1 ],
+					"source" : [ "obj-157", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-29", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-29", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 2 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+ ],
+		"autosave" : 0,
+		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+	}
+
+}

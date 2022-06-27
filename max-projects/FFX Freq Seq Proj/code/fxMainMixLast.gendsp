@@ -1,0 +1,283 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 1400.0, -171.0, 1212.0, 873.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 94.0, 809.0, 37.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 206.0, 821.0, 37.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-93",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-94",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 130.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-95",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 210.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-162",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 290.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-163",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 370.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-182",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 286.0, 821.0, 37.0, 22.0 ],
+					"text" : "out 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 450.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 530.0, 14.0, 30.0, 22.0 ],
+					"text" : "in 7"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 366.0, 821.0, 37.0, 22.0 ],
+					"text" : "out 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 446.0, 821.0, 37.0, 22.0 ],
+					"text" : "out 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "require (\"fsDSPLibrary.genexpr\");\r\n//top mixer\r\nmainMixIn(dryL, dryR, wetL, wetR, trig){\r\n    Param tailDur(min=20);\r\n    Param tailTarg(0, min=0, max=1);\r\n    Param auxMode0(0);\r\n    \r\n    trig = trig > 0;\r\n\r\n    fadeInv = line(trig, dur=20);\r\n    fade = 1 - fadeInv;\r\n    \r\n    t, d, s = 0;\r\n    if (trig == 1){\r\n            t, d, s = 1., 20., 0.;\r\n        }\r\n        else {\r\n            t, d, s = tailTarg, tailDur, 0.5; \r\n        }\r\n    \r\n    tail, flag = curve(t, d, s);\r\n\r\n    dryL = dryL * fade;\r\n    dryR = dryR * fade;\r\n    wetL = wetL * tail;\r\n    wetR = wetR * tail;\r\n\r\n    yL = dryL + wetL;\r\n    yR = dryR + wetR;\r\n\r\n    auxOutL = yL * auxMode0;\r\n    auxOutR = yR * auxMode0;\r\n\r\n    return yL, yR, auxOutL, auxOutR, flag;\r\n\r\n}\r\n//bottom mixer\r\nmainMixOut(dryL, dryR, auxInL, auxInR, trig){\r\n\r\n    History xFade0(1.0);\r\n    History xFade1(0.0);\r\n\r\n    Param auxMode1(0);\r\n    Param xFade(0, min=0., max=.25);\r\n\r\n    sXfade = mixSmooth(xFade, .999);\r\n\r\n    if (change(sXfade)){\r\n        xFade0, xFade1 = stereoXfade(sXfade);\r\n    }\r\n        else{\r\n            xFade0, xFade1 = xFade0, xFade1;\r\n    }\r\n\r\n    trig = trig > 0;\r\n\r\n    fadeInv = line(trig, dur=20);\r\n    fade = 1 - fadeInv;\r\n    \r\n    fxL, fxR, auxOutL, auxOutR, bypassL, bypassR, dryXL, dryXR = 0;\r\n    if (auxMode1 == 0){\r\n            fxL = ((dryL * xFade0) + (auxInL * xFade1));\r\n            fxR = ((dryR * xFade0) + (auxInR * xFade1));\r\n            bypassL = dryL * fade;\r\n            bypassR = dryR * fade;\r\n            auxOutL = dryL * fadeInv; \r\n            auxOutR = dryR * fadeInv;\r\n        }\r\n        else if (auxMode1 == 1){\r\n            dryXL = ((dryL * xFade0) + (auxInL * xFade1));\r\n            dryXR = ((dryR * xFade0) + (auxInR * xFade1));\r\n            bypassL = dryXL * fade;\r\n            bypassR = dryXR * fade;\r\n            fxL = dryXL * fadeInv;\r\n            fxR = dryXR * fadeInv;\r\n            auxOutL, auxOutR = 0;\r\n    }\r\n\r\n    return bypassL, bypassR, fxL, fxR, auxOutL, auxOutR;\r\n\r\n}\r\n\r\n//for fx mixer\r\nParam width(1, min=0.0, max=2.0);\r\nParam haas(0.0, min=0.0, max=20.0);\r\nParam bal(0.5, min=0.0, max=1.0);\r\nParam gain(1);\r\nParam drywet(1.0, min=0.0, max=1.0);\r\n\r\nParam auxMode0(0);\r\nParam tailDur(20, min = 20);\r\nParam tailTarg(min=0, max=1);\r\n\r\n//smoothing for fx mixer\r\nsWidth = mixSmooth(width, .999);\r\nsHaas = mixSmooth(haas, .999);\r\nsBal = mixSmooth(bal, .999);\r\nsGain = mixSmooth(gain, .999);\r\nsDrywet = mixSmooth(drywet, .999);\r\n\r\ndryL, dryR, chainL, chainR, wetL, wetR = in1, in2, in3, in4, in5, in6;\r\ntrig0 = in7;\r\n\r\ny0L, y0R, auxOutL, auxOutR, flag = mainMixIn(chainL, chainR, wetL, wetR, trig0, tailTarg=tailTarg, tailDur=tailDur, auxMode0=auxMode0);\r\n\r\ny1L, y1R = fxMixer(dryL, dryR, y0L, y0R, sWidth, sHaas, sBal, sGain, sDrywet);\r\n\r\nout1 = y1L;\r\nout2 = y1R;\r\nout3 = auxOutL;\r\nout4 = auxOutR;\r\nout5 = flag;\r\n\r\n",
+					"fontface" : 0,
+					"fontname" : "Lucida Console",
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"maxclass" : "codebox",
+					"numinlets" : 7,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 50.0, 109.0, 1228.0, 630.20001220703125 ]
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 5 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 6 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 3 ],
+					"source" : [ "obj-162", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 4 ],
+					"source" : [ "obj-163", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-182", 0 ],
+					"source" : [ "obj-9", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-9", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-9", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-93", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"source" : [ "obj-94", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 2 ],
+					"source" : [ "obj-95", 0 ]
+				}
+
+			}
+ ],
+		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+	}
+
+}

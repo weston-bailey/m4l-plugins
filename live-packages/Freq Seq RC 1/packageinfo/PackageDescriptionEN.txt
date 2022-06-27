@@ -1,0 +1,4 @@
+FFX Freq Seq [RC 1] by Freq FX
+
+
+This is the first release canidate of Freq Seq. It Includes the devices FFX Freq Seq [RC 1] and FFX Freq Seq MIDI SEND [RC 1]

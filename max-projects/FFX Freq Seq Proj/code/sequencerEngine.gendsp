@@ -1,0 +1,201 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"rect" : [ 2041.0, -163.0, 570.0, 864.0 ],
+		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 62.0, 779.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 62.0, 779.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 130.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 130.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 210.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 210.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 290.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 290.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 370.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 370.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 450.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 450.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.0, 418.0, 37.0, 22.0 ],
+					"presentation_rect" : [ 530.0, 418.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 7"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "offSet(){\r\n    Param step();\r\n    Param pattern();\r\n    return step + (pattern * 64);\r\n\r\n}\r\n\r\n\r\nBuffer inGen(\"inGen\");\r\n\r\nParam step0();\r\nParam step1();\r\nParam step2();\r\nParam step3();\r\nParam step4();\r\nParam step5();\r\nParam step6();\r\nParam RedAdd();\r\nParam OrangeAdd(0);\r\nParam YellowAdd(0);\r\nParam GreenAdd(0);\r\nParam BlueAdd(0);\r\nParam IndigoAdd(0);\r\nParam VioletAdd(0);\r\nParam pattern(1);\r\n\r\n/*\r\nstep0 = in1;\r\nstep1 = in2;\r\nstep2 = in3;\r\nstep3 = in4;\r\nstep4 = in5;\r\nstep5 = in6;\r\nstep6 = in7;\r\n*/\r\n\r\nseq0 = peek(inGen, offSet(step=step0, pattern=pattern), 0, index=\"samples\");\r\nseq1 = peek(inGen, offSet(step=step1, pattern=pattern), 1, index=\"samples\");\r\nseq2 = peek(inGen, offSet(step=step2, pattern=pattern), 2, index=\"samples\");\r\nseq3 = peek(inGen, offSet(step=step3, pattern=pattern), 3, index=\"samples\");\r\nseq4 = peek(inGen, offSet(step=step4, pattern=pattern), 4, index=\"samples\");\r\nseq5 = peek(inGen, offSet(step=step5, pattern=pattern), 5, index=\"samples\");\r\nseq6 = peek(inGen, offSet(step=step6, pattern=pattern), 6, index=\"samples\");\r\n\r\n\r\n\r\n\r\nout1 = clamp(seq0 + RedAdd, 0, 1);\r\nout2 = clamp(seq1 + OrangeAdd, 0, 1);\r\nout3 = clamp(seq2 + YellowAdd, 0, 1);\r\nout4 = clamp(seq3 + GreenAdd, 0, 1);\r\nout5 = clamp(seq4 + BlueAdd, 0, 1);\r\nout6 = clamp(seq5 + IndigoAdd, 0, 1);\r\nout7 = clamp(seq6 + VioletAdd, 0, 1);\r\n//out8 = offSet(step=step0, pattern=pattern);\r\n\r\n\r\n\r\n",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "codebox",
+					"numinlets" : 1,
+					"numoutlets" : 7,
+					"outlettype" : [ "", "", "", "", "", "", "" ],
+					"patching_rect" : [ 50.0, 109.0, 1752.0, 656.0 ],
+					"presentation_rect" : [ 50.0, 109.0, 1752.0, 656.0 ],
+					"style" : ""
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"source" : [ "obj-19", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"source" : [ "obj-19", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-19", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-19", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"source" : [ "obj-19", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"source" : [ "obj-19", 6 ]
+				}
+
+			}
+ ]
+	}
+
+}
