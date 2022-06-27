@@ -10,7 +10,10 @@ Most of these can be downloaded [over at gumroad](https://freqfx.gumroad.com/), 
 
 ## Cloning this repo
 
-* ???
+* make sure you have downloaded and installed `git large file storage` [instructions here](https://github.com/git-lfs/git-lfs#downloading)
+* clone this repo
+* cd into the new folder
+* run `git lfs pull`
 
 ## Plugins
 
